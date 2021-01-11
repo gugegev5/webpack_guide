@@ -43,3 +43,56 @@ return import('lodash')
 > `todotodo`: For more information on the reason behind this, read [webpack 4: import() and CommonJs](https://medium.com/webpack/webpack-4-import-and-commonjs-d619d626b655).
 
 > [dynamic expression](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) to import()
+
+
+## Prefetching/Preloading modules
+
+Using these inline directives while declaring your imports allows webpack to output `“Resource Hint”` which tells the browser that for:
+
+* prefetch: resource is probably needed for some navigation in the future
+
+* preload: resource will also be needed during the current navigation
+
+### prefetch:
+```js
+import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
+```
+==>
+```html
+<link rel="prefetch" href="login-modal-chunk.js"> //  instruct the browser to prefetch in idle time the login-modal-chunk.js file
+```
+> `todotodo:` webpack will add the prefetch hint once the parent chunk has been loaded.
+
+### preload
+```js
+import(/* webpackPreload: true */ 'ChartingLibrary');
+```
+==>
+```html
+<link rel="preload">
+```
+> `todotodo:` Using webpackPreload incorrectly can actually hurt performance
+
+### preload prefetch区别
+
+* A preloaded chunk starts loading in parallel to the parent chunk. A prefetched chunk starts after the parent chunk finishes loading.
+
+* A preloaded chunk has medium priority and is instantly downloaded. A prefetched chunk is downloaded while the browser is idle.
+
+* A preloaded chunk should be instantly requested by the parent chunk. A prefetched chunk can be used anytime in the future.
+
+* Browser support is different.
+
+## Bundle Analysis: check where modules have ended up
+
+* [official analyze tool](https://github.com/webpack/analyse)
+
+* [webpack-chart](https://alexkuz.github.io/webpack-chart/): Interactive pie chart for webpack stats.
+
+* [webpack-visualizer](https://chrisbateman.github.io/webpack-visualizer/): Visualize and analyze your bundles to see which modules are taking up space and which might be duplicates.
+
+* [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer): A plugin and CLI utility that represents bundle content as a convenient interactive zoomable treemap.
+
+* [webpack bundle optimize helper](https://webpack.jakoblind.no/optimize): This tool will analyze your bundle and give you actionable suggestions on what to improve to reduce your bundle size.
+
+* [bundle-stats](https://github.com/bundle-stats/bundle-stats): Generate a bundle report(bundle size, assets, modules) and compare the results between different builds
