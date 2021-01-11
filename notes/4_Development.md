@@ -13,3 +13,8 @@ inline-source-map 没压缩?
 ### Using [webpack-dev-server](https://webpack.js.org/configuration/dev-server)
  * simple web server 
  * the ability to use live reloading.
+
+### Using webpack-dev-middleware
+webpack-dev-middleware is a wrapper that will emit files processed by webpack to a server
+
+[Hot Module Replacement guide](https://webpack.js.org/guides/hot-module-replacement/)
