@@ -4,3 +4,8 @@
 [options](https://webpack.js.org/configuration/devtool)
 
 inline-source-map 没压缩?
+
+## Choosing a Development Tool
+
+### Using Watch Mode
+[cleanStaleWebpackAssets option](https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional)
