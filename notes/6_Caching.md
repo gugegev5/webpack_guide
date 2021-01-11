@@ -25,3 +25,8 @@ splitChunks: {
   },
 },
 ```
+
+## Module Identifiers
+[module.id]https://webpack.js.org/api/module-variables/#moduleid-commonjs) is incremented based on resolving order by default.
+
+## todotodo [Guides - Explain Hash Changes in Caching Guide](https://github.com/webpack/webpack.js.org/issues/652)

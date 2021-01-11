@@ -15,6 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   optimization: {
+    moduleIds: 'deterministic',
     runtimeChunk: "single", // split runtime code into a separate chunk
     splitChunks: {
       cacheGroups: {
