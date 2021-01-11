@@ -9,3 +9,7 @@ inline-source-map 没压缩?
 
 ### Using Watch Mode
 [cleanStaleWebpackAssets option](https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional)
+
+### Using [webpack-dev-server](https://webpack.js.org/configuration/dev-server)
+ * simple web server 
+ * the ability to use live reloading.
