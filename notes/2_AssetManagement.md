@@ -24,3 +24,18 @@ import data from './data.json';
 // Warning shown, this is not allowed by the spec.
 import { foo } from './data.json';
 ```
+
+## Global Assets
+ It's still possible to store these assets in a base directory and even use [aliasing](https://webpack.js.org/configuration/resolve/#resolvealias) to make them easier to import
+
+ ```
+ |- /assets
+ |– /components
+ |  |– /my-component
+ |  |  |– index.jsx
+ |  |  |– index.css
+ |  |  |– icon.svg
+ |  |  |– img.png
+ ```
+
+ > [Loading Fonts on SurviveJS](https://survivejs.com/webpack/loading/fonts/)
