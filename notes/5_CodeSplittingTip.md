@@ -41,3 +41,5 @@ return import('lodash')
 > `default`原因: since webpack 4, when importing a ***CommonJS module***, the import will no longer resolve to the value of `module.exports`, it will instead create an artificial namespace object for the CommonJS module
 
 > `todotodo`: For more information on the reason behind this, read [webpack 4: import() and CommonJs](https://medium.com/webpack/webpack-4-import-and-commonjs-d619d626b655).
+
+> [dynamic expression](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) to import()
