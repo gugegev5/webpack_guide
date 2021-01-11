@@ -4,21 +4,16 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
   entry: {
-    index: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
+    index: './src/index.js',
+    another: './src/another-module.js',
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
-    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };

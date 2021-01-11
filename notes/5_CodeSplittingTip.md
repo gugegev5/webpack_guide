@@ -14,6 +14,8 @@ some pitfalls to this approach:
 
 * It isn't as flexible and can't be used to dynamically split code with the core application logic.
 
+todotodo: shared.bundle.js runtime.bundle.js?
+
 ## Prevent Duplication
 
 ### Entry dependencies
