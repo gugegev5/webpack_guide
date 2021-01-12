@@ -37,3 +37,29 @@ require(['webpackNumbers'], function (webpackNumbers) {
 ```
 
 ### [webpack-library-example](https://github.com/kalcifer/webpack-library-example)
+
+### todotodo: peerDependency
+```js
+externals: {
+  lodash: {
+    commonjs: 'lodash',
+    commonjs2: 'lodash',
+    amd: 'lodash',
+    root: '_',
+  },
+}
+```
+This means that your library expects a dependency named lodash to be available in the consumer's environment
+
+> 只做引用的话, externals 设为array
+
+### todotodo:  While [multi-part libraries](https://github.com/webpack/webpack/tree/master/examples/multi-part-library) are possible, it is simpler to expose partial exports through an [index script](https://stackoverflow.com/questions/34072598/es6-exporting-importing-in-index-file) that serves as a single entry point
+
+## Expose the Library `library` `libraryTarget`
+* Variable: as a global variable made available by a script tag (`libraryTarget:'var'`).
+
+* This: available through the this object (`libraryTarget:'this'`).
+
+* Window: available through the window object, in the browser (`libraryTarget:'window'`).
+
+* UMD: available after AMD or CommonJS require (`libraryTarget:'umd'`).

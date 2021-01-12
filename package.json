@@ -2,7 +2,7 @@
   "name": "webpack_guide",
   "version": "1.0.0",
   "description": "https://webpack.js.org/guides/",
-  "private": true,
+  "main": "dist/webpack-numbers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
