@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: "./src/index.js",
   output: {
     filename: "webpack-numbers.js",
@@ -9,10 +9,10 @@ module.exports = {
     library: 'webpackNumbers',
     libraryTarget: 'umd',
   },
-  devtool: "source-map",
-  optimization: {
-    runtimeChunk: true,
-  },
+  // devtool: "source-map",
+  // optimization: {
+  //   runtimeChunk: true,
+  // },
   externals: {
     lodash: {
       commonjs: "lodash",

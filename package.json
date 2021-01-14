@@ -1,8 +1,8 @@
 {
-  "name": "webpack_guide",
-  "version": "1.0.0",
+  "name": "@gup-front/webpack_guide",
+  "version": "1.0.1",
   "description": "https://webpack.js.org/guides/",
-  "main": "dist/webpack-numbers.js",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -18,6 +18,12 @@
     "url": "https://github.com/gugegev5/webpack_guide/issues"
   },
   "homepage": "https://github.com/gugegev5/webpack_guide#readme",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "dist/"
+  ],
   "devDependencies": {
     "webpack": "^5.12.3",
     "webpack-cli": "^4.3.1"
