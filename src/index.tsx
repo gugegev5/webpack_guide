@@ -1,7 +1,8 @@
 import _ from "lodash";
 import numRef from "./ref.json";
+import Loader from "./Time";
 
-export function numToWord(num) {
+export function numToWord(num: number): string {
   return _.reduce(
     numRef,
     (accum, ref) => {
@@ -11,7 +12,7 @@ export function numToWord(num) {
   );
 }
 
-export function wordToNum(word) {
+export function wordToNum(word: string): number {
   return _.reduce(
     numRef,
     (accum, ref) => {
@@ -20,3 +21,5 @@ export function wordToNum(word) {
     -1
   );
 }
+
+export default Loader;
